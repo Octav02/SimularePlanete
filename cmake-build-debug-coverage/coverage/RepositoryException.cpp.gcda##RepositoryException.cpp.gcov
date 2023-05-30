@@ -1,0 +1,28 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/RepositoryException.cpp
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/RepositoryException.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/RepositoryException.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "RepositoryException.h"
+function _ZN19RepositoryExceptionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 62%
+        2:    3:RepositoryException::RepositoryException(const string &message) {
+        2:    3-block  0
+call    0 returned 2
+call    1 returned 2
+        2:    4:    this->message = message;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    5:}
+        2:    5-block  0
+    $$$$$:    5-block  1
+call    0 never executed
+    $$$$$:    5-block  2
+call    1 never executed
+        -:    6:
+function _ZN19RepositoryException4whatB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:    7:string RepositoryException::what() {
+        1:    8:    return this->message;
+        1:    8-block  0
+call    0 returned 1
+        -:    9:}

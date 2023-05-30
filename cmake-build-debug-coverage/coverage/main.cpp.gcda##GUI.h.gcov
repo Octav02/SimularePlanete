@@ -1,0 +1,205 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/GUI.h
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/main.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "Service.h"
+        -:    3:#include <QLineEdit>
+        -:    4:#include <QListWidget>
+        -:    5:#include <QPushButton>
+        -:    6:#include <QHBoxLayout>
+        -:    7:#include <QVBoxLayout>
+        -:    8:#include <QMessageBox>
+        -:    9:
+        -:   10:
+        -:   11:class GUI : public  QWidget{
+        -:   12:private:
+        -:   13:    Service& service;
+        -:   14:
+        -:   15:    QListWidget* list = new QListWidget();
+        -:   16:    QLineEdit* codeLine = new QLineEdit();
+        -:   17:    QLineEdit* nameLine = new QLineEdit();
+        -:   18:    QLineEdit* solarSystemLine = new QLineEdit();
+        -:   19:    QLineEdit* massLine = new QLineEdit();
+        -:   20:    QLineEdit* diameterLine = new QLineEdit();
+        -:   21:
+        -:   22:    vector<QPushButton*> buttons;
+        -:   23:    QVBoxLayout* thirdRow = new QVBoxLayout();
+        -:   24:    QPushButton* sortByMassButton = new QPushButton("Sort By mass");
+        -:   25:    QPushButton* sortByDiameterButton = new QPushButton("Sort By diameter");
+        -:   26:    QPushButton* sortByNameButton = new QPushButton("Sort By name");
+        -:   27:
+        -:   28:    void loadData(vector<Planet> planets);
+        -:   29:    void generateButtons();
+        -:   30:    void initGUI();
+        -:   31:    void initConnect();
+        -:   32:public:
+function _ZN3GUIC2ER7Service called 1 returned 100% blocks executed 51%
+        1:   33:    GUI(Service& service) : service(service) {
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   33-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   33-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   33-block  3
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   33-block  4
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   33-block  5
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   33-block  6
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:   33-block  7
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0 (throw)
+        1:   33-block  8
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   33-block  9
+call   28 returned 1
+branch 29 taken 1 (fallthrough)
+branch 30 taken 0 (throw)
+        1:   33-block 10
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0 (throw)
+        1:   33-block 11
+call   34 returned 1
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0 (throw)
+        1:   33-block 12
+call   37 returned 1
+branch 38 taken 1 (fallthrough)
+branch 39 taken 0 (throw)
+        1:   33-block 13
+call   40 returned 1
+call   41 returned 1
+branch 42 taken 1 (fallthrough)
+branch 43 taken 0 (throw)
+        1:   33-block 14
+call   44 returned 1
+branch 45 taken 1 (fallthrough)
+branch 46 taken 0 (throw)
+        1:   33-block 15
+call   47 returned 1
+branch 48 taken 1 (fallthrough)
+branch 49 taken 0 (throw)
+        1:   33-block 16
+call   50 returned 1
+branch 51 taken 1 (fallthrough)
+branch 52 taken 0 (throw)
+        1:   33-block 17
+call   53 returned 1
+branch 54 taken 1 (fallthrough)
+branch 55 taken 0 (throw)
+        1:   33-block 18
+call   56 returned 1
+call   57 returned 1
+branch 58 taken 1 (fallthrough)
+branch 59 taken 0 (throw)
+        1:   33-block 19
+call   60 returned 1
+branch 61 taken 1 (fallthrough)
+branch 62 taken 0 (throw)
+        1:   33-block 20
+call   63 returned 1
+branch 64 taken 1 (fallthrough)
+branch 65 taken 0 (throw)
+        1:   33-block 21
+call   66 returned 1
+call   67 returned 1
+branch 68 taken 1 (fallthrough)
+branch 69 taken 0 (throw)
+        1:   33-block 22
+call   70 returned 1
+branch 71 taken 1 (fallthrough)
+branch 72 taken 0 (throw)
+        1:   33-block 23
+call   73 returned 1
+branch 74 taken 1 (fallthrough)
+branch 75 taken 0 (throw)
+        1:   33-block 24
+call   76 returned 1
+    $$$$$:   33-block 25
+call   77 never executed
+    $$$$$:   33-block 26
+call   78 never executed
+    $$$$$:   33-block 27
+call   79 never executed
+    $$$$$:   33-block 28
+call   80 never executed
+    $$$$$:   33-block 29
+call   81 never executed
+    $$$$$:   33-block 30
+call   82 never executed
+    $$$$$:   33-block 31
+call   83 never executed
+    $$$$$:   33-block 32
+call   84 never executed
+    $$$$$:   33-block 33
+call   85 never executed
+    $$$$$:   33-block 34
+call   86 never executed
+    $$$$$:   33-block 35
+    $$$$$:   33-block 36
+call   87 never executed
+    $$$$$:   33-block 37
+call   88 never executed
+    $$$$$:   33-block 38
+    $$$$$:   33-block 39
+call   89 never executed
+    $$$$$:   33-block 40
+call   90 never executed
+    $$$$$:   33-block 41
+        1:   34:        initGUI();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35:        loadData(service.getAllPlanets());
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   35-block  2
+call    6 returned 1
+    $$$$$:   35-block  3
+call    7 never executed
+    $$$$$:   35-block  4
+        1:   36:        initConnect();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37:        generateButtons();
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38:    };
+        1:   38-block  0
+    $$$$$:   38-block  1
+call    0 never executed
+    $$$$$:   38-block  2
+call    1 never executed
+        -:   39:};

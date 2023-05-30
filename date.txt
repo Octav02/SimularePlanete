@@ -1,0 +1,10 @@
+1111,Mercury,Solar1,100,100
+2222,Venus,Solar2,500,320
+3333,Terra,Solar1,250,500
+4444,Marte,Solar2,300,150
+5555,Kepler2,Solar4,6,250
+6666,Kepler1,Solar4,600,450
+7777,Jupiter,Solar1,5,350
+8888,Neptune,Solar3,300,450
+9999,Pluto,Solar3,1500,670
+1000,Saturn,Solar2,4000,360

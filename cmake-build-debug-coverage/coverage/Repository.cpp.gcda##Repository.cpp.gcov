@@ -1,0 +1,265 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/Repository.cpp
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Repository.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by octav on 25.05.2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Repository.h"
+        -:    6:
+function _ZN10RepositoryC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 73%
+        3:    7:Repository::Repository(string fileName) {
+        3:    7-block  0
+call    0 returned 3
+call    1 returned 3
+        3:    8:    this->fileName = "../" + fileName;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:    8-block  0
+call    3 returned 3
+call    4 returned 3
+        3:    9:    this->loadFromFile();
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   10:}
+        3:   10-block  0
+    $$$$$:   10-block  1
+call    0 never executed
+    $$$$$:   10-block  2
+call    1 never executed
+        -:   11:
+function _ZN10Repository9getPlanetEi called 10 returned 80% blocks executed 70%
+       10:   12:Planet Repository::getPlanet(int code) {
+       39:   13:    for (auto &planet: planets) {
+       10:   13-block  0
+call    0 returned 10
+call    1 returned 10
+       37:   13-block  1
+call    2 returned 37
+       29:   13-block  2
+call    3 returned 29
+       39:   13-block  3
+call    4 returned 39
+branch  5 taken 37
+branch  6 taken 2 (fallthrough)
+       37:   14:        if (planet.getCode() == code)
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:   14-block  0
+branch  3 taken 8 (fallthrough)
+branch  4 taken 29
+        8:   15:            return planet;
+        8:   15-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   15-block  1
+        8:   15-block  2
+        -:   16:    }
+        2:   17:    throw RepositoryException("Planet does not exist");
+        2:   17-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   17-block  1
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        2:   17-block  2
+call    8 returned 2
+call    9 returned 2
+call   10 returned 0
+    $$$$$:   17-block  3
+call   11 never executed
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+call   12 never executed
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+call   13 never executed
+        -:   18:}
+        -:   19:
+function _ZN10Repository13getAllPlanetsEv called 15 returned 100% blocks executed 85%
+       15:   20:vector<Planet> Repository::getAllPlanets() {
+       15:   21:    vector<Planet> result;
+       15:   21-block  0
+call    0 returned 15
+      123:   22:    for (auto &planet: planets)
+call    0 returned 15
+call    1 returned 15
+      108:   22-block  0
+call    2 returned 108
+      108:   22-block  1
+call    3 returned 108
+      123:   22-block  2
+call    4 returned 123
+branch  5 taken 108
+branch  6 taken 15 (fallthrough)
+      108:   23:        result.push_back(planet);
+call    0 returned 108
+branch  1 taken 108 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   24:    return result;
+       15:   24-block  0
+       15:   24-block  1
+    =====:   25:}
+    $$$$$:   25-block  0
+call    0 never executed
+        -:   26:
+function _ZN10Repository12loadFromFileEv called 3 returned 100% blocks executed 56%
+        3:   27:void Repository::loadFromFile() {
+        3:   28:    ifstream fin(fileName);
+        3:   28-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   29:    if (!fin.is_open())
+        3:   29-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   29-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 3
+    #####:   30:        throw RepositoryException("File  could not be opened");
+    %%%%%:   30-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   30-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   30-block  2
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    $$$$$:   30-block  3
+call   11 never executed
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+call   12 never executed
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+call   13 never executed
+        3:   31:    string line;
+        3:   31-block  0
+call    0 returned 3
+        3:   32:    planets.clear();
+call    0 returned 3
+       19:   33:    while (getline(fin,line)) {
+       19:   33-block  0
+call    0 returned 19
+branch  1 taken 19 (fallthrough)
+branch  2 taken 0 (throw)
+       19:   33-block  1
+call    3 returned 19
+branch  4 taken 19 (fallthrough)
+branch  5 taken 0 (throw)
+       19:   33-block  2
+branch  6 taken 16
+branch  7 taken 3 (fallthrough)
+       16:   34:        stringstream  ss(line);
+       16:   34-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   35:        string token;
+       16:   35-block  0
+call    0 returned 16
+       16:   36:        vector<string> tokens;
+call    0 returned 16
+       96:   37:        while(getline(ss,token,','))
+       96:   37-block  0
+call    0 returned 96
+branch  1 taken 96 (fallthrough)
+branch  2 taken 0 (throw)
+       96:   37-block  1
+call    3 returned 96
+branch  4 taken 96 (fallthrough)
+branch  5 taken 0 (throw)
+       96:   37-block  2
+branch  6 taken 80
+branch  7 taken 16 (fallthrough)
+       80:   38:            tokens.push_back(token);
+       80:   38-block  0
+call    0 returned 80
+branch  1 taken 80 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   39:        int code = stoi(tokens[0]);
+       16:   39-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   40:        string name = tokens[1];
+       16:   40-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   41:        string solarSystem = tokens[2];
+       16:   41-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   42:        int mass = stoi(tokens[3]);
+       16:   42-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   43:        int diameter = stoi(tokens[4]);
+       16:   43-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   44:        Planet planet(code,name,solarSystem,mass,diameter);
+       16:   44-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   45:        planets.push_back(planet);
+       16:   45-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   46:    }
+       16:   46-block  0
+call    0 returned 16
+call    1 returned 16
+call    2 returned 16
+call    3 returned 16
+call    4 returned 16
+call    5 returned 16
+    $$$$$:   46-block  1
+call    6 never executed
+    $$$$$:   46-block  2
+call    7 never executed
+    $$$$$:   46-block  3
+call    8 never executed
+    $$$$$:   46-block  4
+call    9 never executed
+    $$$$$:   46-block  5
+call   10 never executed
+    $$$$$:   46-block  6
+call   11 never executed
+        3:   47:}
+        3:   47-block  0
+call    0 returned 3
+call    1 returned 3
+    $$$$$:   47-block  1
+call    2 never executed
+    $$$$$:   47-block  2
+call    3 never executed

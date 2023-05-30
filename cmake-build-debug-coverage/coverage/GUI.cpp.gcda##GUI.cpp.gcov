@@ -1,0 +1,799 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/GUI.cpp
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/GUI.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/GUI.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by octav on 25.05.2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "GUI.h"
+        -:    6:
+function _ZN3GUI11initConnectEv called 1 returned 100% blocks executed 100%
+        1:    7:void GUI::initConnect() {
+function _ZZN3GUI11initConnectEvENKUlvE_clEv called 7 returned 100% blocks executed 54%
+        1:    8:    QObject::connect(list, &QListWidget::itemSelectionChanged, [&]() {
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+        7:    9:        if (list->selectedItems().isEmpty()) {
+        7:    9-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:    9-block  1
+call    3 returned 7
+call    4 returned 7
+branch  5 taken 1 (fallthrough)
+branch  6 taken 6
+        1:   10:            codeLine->setText("");
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   10-block  2
+call    6 returned 1
+    $$$$$:   10-block  3
+call    7 never executed
+    $$$$$:   10-block  4
+        1:   11:            nameLine->setText("");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   11-block  1
+call    6 returned 1
+    $$$$$:   11-block  2
+call    7 never executed
+    $$$$$:   11-block  3
+        1:   12:            solarSystemLine->setText("");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block  1
+call    6 returned 1
+    $$$$$:   12-block  2
+call    7 never executed
+    $$$$$:   12-block  3
+        1:   13:            massLine->setText("");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  1
+call    6 returned 1
+    $$$$$:   13-block  2
+call    7 never executed
+    $$$$$:   13-block  3
+        1:   14:            diameterLine->setText("");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   14-block  1
+call    6 returned 1
+    $$$$$:   14-block  2
+call    7 never executed
+    $$$$$:   14-block  3
+        1:   15:            return;
+        -:   16:        }
+        6:   17:        auto item = list->selectedItems().at(0);
+        6:   17-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   17-block  1
+call    3 returned 6
+call    4 returned 6
+        6:   18:        string line = item->text().toStdString();
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   18-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   18-block  1
+        6:   19:        stringstream ss(line);
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   20:        string token;
+        6:   20-block  0
+call    0 returned 6
+        6:   21:        getline(ss, token, ' ');
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   22:        int code = stoi(token);
+        6:   22-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   23:        Planet planet = service.getPlanet(code);
+        6:   23-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   24:        codeLine->setText(QString::fromStdString(to_string(planet.getCode())));
+        6:   24-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   24-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   24-block  2
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   24-block  3
+call    9 returned 6
+branch 10 taken 6 (fallthrough)
+branch 11 taken 0 (throw)
+        6:   24-block  4
+call   12 returned 6
+call   13 returned 6
+    $$$$$:   24-block  5
+call   14 never executed
+    $$$$$:   24-block  6
+    $$$$$:   24-block  7
+call   15 never executed
+    $$$$$:   24-block  8
+        6:   25:        nameLine->setText(QString::fromStdString(planet.getName()));
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   25-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   25-block  1
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   25-block  2
+call    9 returned 6
+call   10 returned 6
+    $$$$$:   25-block  3
+call   11 never executed
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+call   12 never executed
+    $$$$$:   25-block  6
+        6:   26:        solarSystemLine->setText(QString::fromStdString(planet.getSolarSystem()));
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   26-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   26-block  1
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   26-block  2
+call    9 returned 6
+call   10 returned 6
+    $$$$$:   26-block  3
+call   11 never executed
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+call   12 never executed
+    $$$$$:   26-block  6
+        6:   27:        massLine->setText(QString::fromStdString(to_string(planet.getMass())));
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   27-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   27-block  1
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   27-block  2
+call    9 returned 6
+branch 10 taken 6 (fallthrough)
+branch 11 taken 0 (throw)
+        6:   27-block  3
+call   12 returned 6
+call   13 returned 6
+    $$$$$:   27-block  4
+call   14 never executed
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+call   15 never executed
+    $$$$$:   27-block  7
+        6:   28:        diameterLine->setText(QString::fromStdString(to_string(planet.getDiameter())));
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   28-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   28-block  1
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   28-block  2
+call    9 returned 6
+branch 10 taken 6 (fallthrough)
+branch 11 taken 0 (throw)
+        6:   28-block  3
+call   12 returned 6
+call   13 returned 6
+    $$$$$:   28-block  4
+call   14 never executed
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+call   15 never executed
+    $$$$$:   28-block  7
+        6:   29:    });
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+    $$$$$:   29-block  0
+call    4 never executed
+    $$$$$:   29-block  1
+call    5 never executed
+    $$$$$:   29-block  2
+call    6 never executed
+    $$$$$:   29-block  3
+call    7 never executed
+        -:   30:
+function _ZZN3GUI11initConnectEvENKUlvE0_clEv called 1 returned 100% blocks executed 71%
+        1:   31:    QObject::connect(sortByNameButton, &QPushButton::clicked, [&]() {
+call    0 returned 1
+call    1 returned 1
+        1:   32:        loadData(service.sortByName());
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   32-block  1
+call    4 returned 1
+    $$$$$:   32-block  2
+call    5 never executed
+        1:   33:    });
+        -:   34:
+function _ZZN3GUI11initConnectEvENKUlvE1_clEv called 1 returned 100% blocks executed 71%
+        1:   35:    QObject::connect(sortByMassButton, &QPushButton::clicked, [&]() {
+call    0 returned 1
+call    1 returned 1
+        1:   36:        loadData(service.sortByMass());
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  1
+call    4 returned 1
+    $$$$$:   36-block  2
+call    5 never executed
+        1:   37:    });
+        -:   38:
+function _ZZN3GUI11initConnectEvENKUlvE2_clEv called 1 returned 100% blocks executed 71%
+        1:   39:    QObject::connect(sortByDiameterButton, &QPushButton::clicked, [&]() {
+call    0 returned 1
+call    1 returned 1
+        1:   40:        loadData(service.sortByDiameter());
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   40-block  1
+call    4 returned 1
+    $$$$$:   40-block  2
+call    5 never executed
+        1:   41:    });
+        1:   42:}
+        -:   43:
+function _ZN3GUI7initGUIEv called 1 returned 100% blocks executed 67%
+        1:   44:void GUI::initGUI() {
+        1:   45:    auto mainLayout = new QHBoxLayout();
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   45-block  1
+call    4 never executed
+        1:   46:    auto firstRow = new QVBoxLayout();
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   46-block  1
+call    4 never executed
+        1:   47:    auto linesLayout = new QHBoxLayout();
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   47-block  1
+call    4 never executed
+        1:   48:    linesLayout->addWidget(codeLine);
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   48-block  1
+call    4 never executed
+        1:   49:    linesLayout->addWidget(nameLine);
+        1:   49-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   49-block  1
+call    4 never executed
+        1:   50:    linesLayout->addWidget(solarSystemLine);
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   50-block  1
+call    4 never executed
+        1:   51:    linesLayout->addWidget(massLine);
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   51-block  1
+call    4 never executed
+        1:   52:    linesLayout->addWidget(diameterLine);
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   52-block  1
+call    4 never executed
+        1:   53:    firstRow->addWidget(list);
+        1:   53-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   53-block  1
+call    4 never executed
+        1:   54:    firstRow->addLayout(linesLayout);
+        1:   54-block  0
+call    0 returned 1
+        1:   55:    mainLayout->addLayout(firstRow);
+call    0 returned 1
+        -:   56:
+        1:   57:    auto secondRow = new QHBoxLayout();
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   57-block  0
+call    4 never executed
+        1:   58:    secondRow->addWidget(sortByMassButton);
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   58-block  1
+call    4 never executed
+        1:   59:    secondRow->addWidget(sortByDiameterButton);
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   59-block  1
+call    4 never executed
+        1:   60:    secondRow->addWidget(sortByNameButton);
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   61:    mainLayout->addLayout(secondRow);
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    mainLayout->addLayout(thirdRow);
+call    0 returned 1
+        1:   63:    setLayout(mainLayout);
+call    0 returned 1
+        1:   64:}
+        -:   65:
+function _ZN3GUI8loadDataESt6vectorI6PlanetSaIS1_EE called 4 returned 100% blocks executed 57%
+        4:   66:void GUI::loadData(vector<Planet> planets) {
+        4:   67:    list->clear();
+        4:   67-block  0
+call    0 returned 4
+       44:   68:    for (auto &planet: planets) {
+call    0 returned 4
+call    1 returned 4
+       40:   68-block  0
+call    2 returned 40
+call    3 returned 40
+       44:   68-block  1
+call    4 returned 44
+branch  5 taken 40
+branch  6 taken 4 (fallthrough)
+       80:   69:        string lineText = to_string(planet.getCode()) + " " + planet.getName();
+call    0 returned 40
+branch  1 taken 40 (fallthrough)
+branch  2 taken 0 (throw)
+       40:   69-block  0
+call    3 returned 40
+branch  4 taken 40 (fallthrough)
+branch  5 taken 0 (throw)
+       40:   69-block  1
+call    6 returned 40
+branch  7 taken 40 (fallthrough)
+branch  8 taken 0 (throw)
+       40:   69-block  2
+call    9 returned 40
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0 (throw)
+       40:   69-block  3
+call   12 returned 40
+branch 13 taken 40 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 40
+call   16 returned 40
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+       40:   70:        QListWidgetItem *item = new QListWidgetItem(QString::fromStdString(lineText));
+call    0 returned 40
+branch  1 taken 40 (fallthrough)
+branch  2 taken 0 (throw)
+       40:   70-block  0
+call    3 returned 40
+branch  4 taken 40 (fallthrough)
+branch  5 taken 0 (throw)
+       40:   70-block  1
+call    6 returned 40
+branch  7 taken 40 (fallthrough)
+branch  8 taken 0 (throw)
+       40:   70-block  2
+call    9 returned 40
+    $$$$$:   70-block  3
+call   10 never executed
+    $$$$$:   70-block  4
+call   11 never executed
+    $$$$$:   70-block  5
+        -:   71:        //Set font size
+       40:   72:        if (planet.getMass() <= 10)
+call    0 returned 40
+branch  1 taken 40 (fallthrough)
+branch  2 taken 0 (throw)
+       40:   72-block  0
+branch  3 taken 8 (fallthrough)
+branch  4 taken 32
+        8:   73:            item->setFont(QFont("Times", 12));
+        8:   73-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   73-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:   73-block  2
+call    6 returned 8
+branch  7 taken 8 (fallthrough)
+branch  8 taken 0 (throw)
+        8:   73-block  3
+call    9 returned 8
+call   10 returned 8
+    $$$$$:   73-block  4
+call   11 never executed
+    $$$$$:   73-block  5
+    $$$$$:   73-block  6
+call   12 never executed
+    $$$$$:   73-block  7
+       32:   74:        else if (planet.getMass() <= 100)
+       32:   74-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:   74-block  1
+branch  3 taken 4 (fallthrough)
+branch  4 taken 28
+        4:   75:            item->setFont(QFont("Times", 16));
+        4:   75-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   75-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   75-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   75-block  3
+call    9 returned 4
+call   10 returned 4
+    $$$$$:   75-block  4
+call   11 never executed
+    $$$$$:   75-block  5
+    $$$$$:   75-block  6
+call   12 never executed
+    $$$$$:   75-block  7
+       28:   76:        else if (planet.getMass() <= 1000)
+       28:   76-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   76-block  1
+branch  3 taken 20 (fallthrough)
+branch  4 taken 8
+       20:   77:            item->setFont(QFont("Times", 20));
+       20:   77-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   77-block  1
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
+branch  5 taken 0 (throw)
+       20:   77-block  2
+call    6 returned 20
+branch  7 taken 20 (fallthrough)
+branch  8 taken 0 (throw)
+       20:   77-block  3
+call    9 returned 20
+call   10 returned 20
+    $$$$$:   77-block  4
+call   11 never executed
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+call   12 never executed
+    $$$$$:   77-block  7
+        -:   78:        else
+        8:   79:            item->setFont(QFont("Times", 24));
+        8:   79-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   79-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:   79-block  2
+call    6 returned 8
+branch  7 taken 8 (fallthrough)
+branch  8 taken 0 (throw)
+        8:   79-block  3
+call    9 returned 8
+call   10 returned 8
+    $$$$$:   79-block  4
+call   11 never executed
+    $$$$$:   79-block  5
+    $$$$$:   79-block  6
+call   12 never executed
+    $$$$$:   79-block  7
+       40:   80:        list->addItem(item);
+       40:   80-block  0
+call    0 returned 40
+branch  1 taken 40 (fallthrough)
+branch  2 taken 0 (throw)
+       40:   81:    }
+       40:   81-block  0
+call    0 returned 40
+    $$$$$:   81-block  1
+call    1 never executed
+        4:   82:    generateButtons();
+        4:   82-block  0
+call    0 returned 4
+        4:   83:}
+        -:   84:
+function _ZN3GUI15generateButtonsEv called 5 returned 100% blocks executed 68%
+        5:   85:void GUI::generateButtons() {
+        5:   86:    auto buttonElements = service.getPlanetBySolarSystem();
+        5:   86-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+       21:   87:    for (auto button : buttons)
+        5:   87-block  0
+call    0 returned 5
+call    1 returned 5
+       16:   87-block  1
+call    2 returned 16
+       16:   87-block  2
+call    3 returned 16
+       21:   87-block  3
+call    4 returned 21
+branch  5 taken 16
+branch  6 taken 5 (fallthrough)
+       16:   88:        delete button;
+branch  0 taken 16 (fallthrough)
+branch  1 taken 0
+       16:   88-block  0
+call    2 returned 16
+        5:   89:    buttons.clear();
+        5:   89-block  0
+call    0 returned 5
+       25:   90:    for (auto &buttonElement : buttonElements) {
+call    0 returned 5
+call    1 returned 5
+       20:   90-block  0
+call    2 returned 20
+call    3 returned 20
+       25:   90-block  1
+call    4 returned 25
+branch  5 taken 20
+branch  6 taken 5 (fallthrough)
+       20:   91:        auto button = new QPushButton(QString::fromStdString(buttonElement.first));
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   91-block  0
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
+branch  5 taken 0 (throw)
+       20:   91-block  1
+call    6 returned 20
+branch  7 taken 20 (fallthrough)
+branch  8 taken 0 (throw)
+       20:   91-block  2
+call    9 returned 20
+    $$$$$:   91-block  3
+call   10 never executed
+    $$$$$:   91-block  4
+call   11 never executed
+    $$$$$:   91-block  5
+       20:   92:        vector<Planet> planets = buttonElement.second;
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   93:        string message;
+       20:   93-block  0
+call    0 returned 20
+       70:   94:        for (auto &planet : planets)
+call    0 returned 20
+call    1 returned 20
+       50:   94-block  0
+call    2 returned 50
+       70:   94-block  1
+call    3 returned 70
+branch  4 taken 50
+branch  5 taken 20 (fallthrough)
+       50:   95:            message += planet.getName() + ",";
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+       50:   95-block  0
+call    3 returned 50
+branch  4 taken 50 (fallthrough)
+branch  5 taken 0 (throw)
+       50:   95-block  1
+call    6 returned 50
+branch  7 taken 50 (fallthrough)
+branch  8 taken 0 (throw)
+       50:   95-block  2
+call    9 returned 50
+call   10 returned 50
+call   11 returned 50
+    $$$$$:   95-block  3
+call   12 never executed
+    $$$$$:   95-block  4
+    $$$$$:   95-block  5
+call   13 never executed
+    $$$$$:   95-block  6
+       20:   96:        message[message.size() - 1] = '\0';
+       20:   96-block  0
+call    0 returned 20
+call    1 returned 20
+branch  2 taken 20 (fallthrough)
+branch  3 taken 0 (throw)
+       20:   97:        buttons.push_back(button);
+       20:   97-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+function _ZZN3GUI15generateButtonsEvENKUlvE_clEv called 3 returned 100% blocks executed 57%
+       20:   98:        QObject::connect(button, &QPushButton::clicked, [&, buttonElement, message]() {
+       20:   98-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   98-block  1
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
+branch  5 taken 0 (throw)
+       20:   98-block  2
+call    6 returned 20
+branch  7 taken 20 (fallthrough)
+branch  8 taken 0 (throw)
+       20:   98-block  3
+call    9 returned 20
+call   10 returned 20
+    $$$$$:   98-block  4
+call   11 never executed
+    $$$$$:   98-block  5
+        3:   99:            QMessageBox::information(this, QString::fromStdString(buttonElement.first), QString::fromStdString(message));
+        3:   99-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   99-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   99-block  2
+call    7 returned 3
+branch  8 taken 3 (fallthrough)
+branch  9 taken 0 (throw)
+        3:   99-block  3
+call   10 returned 3
+call   11 returned 3
+    $$$$$:   99-block  4
+call   12 never executed
+    $$$$$:   99-block  5
+    $$$$$:   99-block  6
+call   13 never executed
+    $$$$$:   99-block  7
+        3:  100:        });
+       20:  101:    }
+call    0 returned 20
+call    1 returned 20
+    $$$$$:  101-block  0
+call    2 never executed
+    $$$$$:  101-block  1
+call    3 never executed
+       25:  102:    for (auto button : buttons)
+        5:  102-block  0
+call    0 returned 5
+call    1 returned 5
+       20:  102-block  1
+call    2 returned 20
+       25:  102-block  2
+call    3 returned 25
+branch  4 taken 20
+branch  5 taken 5 (fallthrough)
+       20:  103:        thirdRow->addWidget(button);
+call    0 returned 20
+call    1 returned 20
+branch  2 taken 20 (fallthrough)
+branch  3 taken 0 (throw)
+       20:  103-block  0
+call    4 returned 20
+    $$$$$:  103-block  1
+        5:  104:}
+        5:  104-block  0
+call    0 returned 5
+    $$$$$:  104-block  1
+call    1 never executed

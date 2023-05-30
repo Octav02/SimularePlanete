@@ -1,0 +1,154 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/Service.cpp
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Service.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by octav on 25.05.2023.
+        -:    3://
+        -:    4:
+        -:    5:#include <algorithm>
+        -:    6:#include "Service.h"
+        -:    7:
+function _ZN7Service9getPlanetEi called 8 returned 88% blocks executed 100%
+        8:    8:Planet Service::getPlanet(int code) {
+        8:    9:    return repository.getPlanet(code);
+        8:    9-block  0
+call    0 returned 7
+        -:   10:}
+        -:   11:
+function _ZN7Service13getAllPlanetsEv called 2 returned 100% blocks executed 100%
+        2:   12:vector<Planet> Service::getAllPlanets() {
+        2:   13:    return repository.getAllPlanets();
+        2:   13-block  0
+call    0 returned 2
+        -:   14:}
+        -:   15:
+function _ZN7Service10sortByMassEv called 2 returned 100% blocks executed 88%
+        2:   16:vector<Planet> Service::sortByMass() {
+        2:   17:    vector<Planet> planets = repository.getAllPlanets();
+        2:   17-block  0
+call    0 returned 2
+function _ZZN7Service10sortByMassEvENKUl6PlanetS0_E_clES0_S0_ called 25 returned 100% blocks executed 100%
+        2:   18:    sort(planets.begin(),planets.end(),[](Planet p1, Planet p2){
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+       25:   19:        return p1.getMass() <= p2.getMass();
+       25:   19-block  0
+call    0 returned 25
+call    1 returned 25
+        -:   20:    });
+        2:   21:    return planets;
+        2:   21-block  0
+        2:   21-block  1
+    =====:   22:}
+    $$$$$:   22-block  0
+call    0 never executed
+        -:   23:
+function _ZN7Service14sortByDiameterEv called 2 returned 100% blocks executed 88%
+        2:   24:vector<Planet> Service::sortByDiameter() {
+        2:   25:    vector<Planet> planets = repository.getAllPlanets();
+        2:   25-block  0
+call    0 returned 2
+function _ZZN7Service14sortByDiameterEvENKUl6PlanetS0_E_clES0_S0_ called 36 returned 100% blocks executed 100%
+        2:   26:    sort(planets.begin(),planets.end(),[](Planet p1, Planet p2){
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+       36:   27:        return p1.getDiameter() <= p2.getDiameter();
+       36:   27-block  0
+call    0 returned 36
+call    1 returned 36
+        -:   28:    });
+        2:   29:    return planets;
+        2:   29-block  0
+        2:   29-block  1
+    =====:   30:}
+    $$$$$:   30-block  0
+call    0 never executed
+        -:   31:
+function _ZN7Service10sortByNameEv called 2 returned 100% blocks executed 88%
+        2:   32:vector<Planet> Service::sortByName() {
+        2:   33:    vector<Planet> planets = repository.getAllPlanets();
+        2:   33-block  0
+call    0 returned 2
+function _ZZN7Service10sortByNameEvENKUl6PlanetS0_E_clES0_S0_ called 25 returned 100% blocks executed 80%
+        2:   34:    sort(planets.begin(),planets.end(),[](Planet p1, Planet p2){
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+       25:   35:        return p1.getName() <= p2.getName();
+       25:   35-block  0
+call    0 returned 25
+call    1 returned 25
+branch  2 taken 25 (fallthrough)
+branch  3 taken 0 (throw)
+       25:   35-block  1
+call    4 returned 25
+call    5 returned 25
+call    6 returned 25
+       25:   35-block  2
+    $$$$$:   35-block  3
+call    7 never executed
+        -:   36:    });
+        2:   37:    return planets;
+        2:   37-block  0
+        2:   37-block  1
+    =====:   38:}
+    $$$$$:   38-block  0
+call    0 never executed
+        -:   39:
+function _ZN7Service22getPlanetBySolarSystemB5cxx11Ev called 6 returned 100% blocks executed 68%
+        6:   40:map<string, vector<Planet>> Service::getPlanetBySolarSystem() {
+        6:   41:    map<string, vector<Planet>> result;
+        6:   41-block  0
+call    0 returned 6
+        6:   42:    vector<Planet> planets = repository.getAllPlanets();
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+       59:   43:    for (auto & planet : planets) {
+        6:   43-block  0
+call    0 returned 6
+call    1 returned 6
+       53:   43-block  1
+call    2 returned 53
+       59:   43-block  2
+call    3 returned 59
+branch  4 taken 53
+branch  5 taken 6 (fallthrough)
+       53:   44:        result[planet.getSolarSystem()].push_back(planet);
+call    0 returned 53
+branch  1 taken 53 (fallthrough)
+branch  2 taken 0 (throw)
+       53:   44-block  0
+call    3 returned 53
+branch  4 taken 53 (fallthrough)
+branch  5 taken 0 (throw)
+       53:   44-block  1
+call    6 returned 53
+branch  7 taken 53 (fallthrough)
+branch  8 taken 0 (throw)
+       53:   44-block  2
+call    9 returned 53
+call   10 returned 53
+    $$$$$:   44-block  3
+call   11 never executed
+    $$$$$:   44-block  4
+        -:   45:    }
+       12:   46:    return result;
+        6:   46-block  0
+        6:   46-block  1
+        6:   47:}
+        6:   47-block  0
+call    0 returned 6
+    $$$$$:   47-block  1
+call    1 never executed
+    $$$$$:   47-block  2
+call    2 never executed

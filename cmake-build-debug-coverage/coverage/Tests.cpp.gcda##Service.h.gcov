@@ -1,0 +1,32 @@
+        -:    0:Source:/home/octav/CLionProjects/SimularePlanete/Service.h
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Tests.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/Tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "Repository.h"
+        -:    3:#include <map>
+        -:    4:
+        -:    5:class Service {
+        -:    6:private:
+        -:    7:    Repository& repository;
+        -:    8:public:
+        -:    9:    //Default consturctor
+        -:   10:    Service() = default;
+        -:   11:    //Constructor with parameters
+function _ZN7ServiceC2ER10Repository called 0 returned 0% blocks executed 0%
+    #####:   12:    Service(Repository& repository) : repository(repository) {};
+        -:   13:
+        -:   14:    //Function that returns a Planet based on its uniq code
+        -:   15:    Planet getPlanet(int code);
+        -:   16:    //Function that returns all the Planets in the repository list
+        -:   17:    vector<Planet> getAllPlanets();
+        -:   18:
+        -:   19:    //Function that returns a vector of Planets, sorted ascending by mass
+        -:   20:    vector<Planet> sortByMass();
+        -:   21:    //Function that returns a vector of Planets, sorted ascending by Diameter
+        -:   22:    vector<Planet> sortByDiameter();
+        -:   23:    //Function that returns a vector of Planets, sorted ascending by Name
+        -:   24:    vector<Planet> sortByName();
+        -:   25:    //Function that gets all the Planets, grouped by the solar System
+        -:   26:    map<string,vector<Planet>> getPlanetBySolarSystem();
+        -:   27:};

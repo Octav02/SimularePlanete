@@ -1,0 +1,14 @@
+# ninja log v5
+7	322	1685002880455704835	CMakeFiles/SimularePlanete.dir/Tests.cpp.o	6221d15c9b21f2e2
+17	28	1684998808479929057	CMakeFiles/SimularePlanete.dir/SimularePlanete_autogen/mocs_compilation.cpp.o	a83b0390dfa224d9
+1	6	1685002880139705863	/home/octav/CLionProjects/SimularePlanete/cmake-build-debug/SimularePlanete_autogen/timestamp	e0bd85a106783845
+17	203	1684998808655926440	CMakeFiles/SimularePlanete.dir/Planet.cpp.o	9a009464d2ca379c
+6	214	1684999675306696177	CMakeFiles/SimularePlanete.dir/RepositoryException.cpp.o	b6668adfab997977
+322	600	1685002880731703937	SimularePlanete	5f4b84309fb29972
+8	1419	1685002814491911923	CMakeFiles/SimularePlanete.dir/main.cpp.o	6fb42e4a6d09acb6
+1	6	1685002880139705863	/home/octav/CLionProjects/SimularePlanete/cmake-build-debug/SimularePlanete_autogen/mocs_compilation.cpp	e0bd85a106783845
+6	288	1684999675382695552	CMakeFiles/SimularePlanete.dir/Repository.cpp.o	9d750501c6db795b
+1	6	1685002880139705863	SimularePlanete_autogen/timestamp	e0bd85a106783845
+1	6	1685002880139705863	SimularePlanete_autogen/mocs_compilation.cpp	e0bd85a106783845
+8	1350	1685002871475733916	CMakeFiles/SimularePlanete.dir/GUI.cpp.o	4b269f455c7ff809
+8	578	1685002693512247550	CMakeFiles/SimularePlanete.dir/Service.cpp.o	c811a931f7d7a212

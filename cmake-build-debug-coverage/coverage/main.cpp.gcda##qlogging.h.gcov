@@ -1,0 +1,202 @@
+        -:    0:Source:/home/octav/Qt/6.5.0/gcc_64/include/QtCore/qlogging.h
+        -:    0:Graph:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/main.cpp.gcno
+        -:    0:Data:/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// Copyright (C) 2016 The Qt Company Ltd.
+        -:    2:// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+        -:    3:
+        -:    4:#include <QtCore/qglobal.h>
+        -:    5:
+        -:    6:#ifndef QLOGGING_H
+        -:    7:#define QLOGGING_H
+        -:    8:
+        -:    9:#if 0
+        -:   10:// header is automatically included in qglobal.h
+        -:   11:#pragma qt_no_master_include
+        -:   12:#pragma qt_class(QtLogging)
+        -:   13:#endif
+        -:   14:
+        -:   15:QT_BEGIN_NAMESPACE
+        -:   16:
+        -:   17:/*
+        -:   18:  Forward declarations only.
+        -:   19:
+        -:   20:  In order to use the qDebug() stream, you must #include<QDebug>
+        -:   21:*/
+        -:   22:class QDebug;
+        -:   23:class QNoDebug;
+        -:   24:
+        -:   25:enum QtMsgType {
+        -:   26:    QtDebugMsg,
+        -:   27:    QtWarningMsg,
+        -:   28:    QtCriticalMsg,
+        -:   29:    QtFatalMsg,
+        -:   30:    QtInfoMsg,
+        -:   31:    QtSystemMsg = QtCriticalMsg
+        -:   32:};
+        -:   33:
+        -:   34:class QMessageLogContext
+        -:   35:{
+        -:   36:    Q_DISABLE_COPY(QMessageLogContext)
+        -:   37:public:
+        -:   38:    constexpr QMessageLogContext() noexcept = default;
+function _ZN18QMessageLogContextC2EPKciS1_S1_ called 1 returned 100% blocks executed 100%
+        1:   39:    constexpr QMessageLogContext(const char *fileName, int lineNumber, const char *functionName, const char *categoryName) noexcept
+        1:   40:        : line(lineNumber), file(fileName), function(functionName), category(categoryName) {}
+        -:   41:
+        -:   42:    int version = 2;
+        -:   43:    int line = 0;
+        -:   44:    const char *file = nullptr;
+        -:   45:    const char *function = nullptr;
+        -:   46:    const char *category = nullptr;
+        -:   47:
+        -:   48:private:
+        -:   49:    QMessageLogContext &copyContextFrom(const QMessageLogContext &logContext) noexcept;
+        -:   50:
+        -:   51:    friend class QMessageLogger;
+        -:   52:    friend class QDebug;
+        -:   53:};
+        -:   54:
+        -:   55:class QLoggingCategory;
+        -:   56:
+        -:   57:#ifdef Q_CC_MSVC
+        -:   58:#  define QT_MESSAGE_LOGGER_NORETURN
+        -:   59:#else
+        -:   60:#  define QT_MESSAGE_LOGGER_NORETURN Q_NORETURN
+        -:   61:#endif
+        -:   62:
+        -:   63:class Q_CORE_EXPORT QMessageLogger
+        -:   64:{
+        -:   65:    Q_DISABLE_COPY(QMessageLogger)
+        -:   66:public:
+        -:   67:    constexpr QMessageLogger() : context() {}
+function _ZN14QMessageLoggerC2EPKciS1_ called 1 returned 100% blocks executed 100%
+        1:   68:    constexpr QMessageLogger(const char *file, int line, const char *function)
+        1:   69:        : context(file, line, function, "default") {}
+        1:   69-block  0
+call    0 returned 1
+        -:   70:    constexpr QMessageLogger(const char *file, int line, const char *function, const char *category)
+        -:   71:        : context(file, line, function, category) {}
+        -:   72:
+        -:   73:    void debug(const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+        -:   74:    void noDebug(const char *, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(2, 3)
+        -:   75:    {}
+        -:   76:    void info(const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+        -:   77:    Q_DECL_COLD_FUNCTION
+        -:   78:    void warning(const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+        -:   79:    Q_DECL_COLD_FUNCTION
+        -:   80:    void critical(const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+        -:   81:    QT_MESSAGE_LOGGER_NORETURN Q_DECL_COLD_FUNCTION
+        -:   82:    void fatal(const char *msg, ...) const noexcept Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+        -:   83:
+        -:   84:    typedef const QLoggingCategory &(*CategoryFunction)();
+        -:   85:
+        -:   86:    void debug(const QLoggingCategory &cat, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   87:    void debug(CategoryFunction catFunc, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   88:    void info(const QLoggingCategory &cat, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   89:    void info(CategoryFunction catFunc, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   90:    Q_DECL_COLD_FUNCTION
+        -:   91:    void warning(const QLoggingCategory &cat, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   92:    Q_DECL_COLD_FUNCTION
+        -:   93:    void warning(CategoryFunction catFunc, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   94:    Q_DECL_COLD_FUNCTION
+        -:   95:    void critical(const QLoggingCategory &cat, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   96:    Q_DECL_COLD_FUNCTION
+        -:   97:    void critical(CategoryFunction catFunc, const char *msg, ...) const Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:   98:    QT_MESSAGE_LOGGER_NORETURN Q_DECL_COLD_FUNCTION
+        -:   99:    void fatal(const QLoggingCategory &cat, const char *msg, ...) const noexcept Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:  100:    QT_MESSAGE_LOGGER_NORETURN Q_DECL_COLD_FUNCTION
+        -:  101:    void fatal(CategoryFunction catFunc, const char *msg, ...) const noexcept Q_ATTRIBUTE_FORMAT_PRINTF(3, 4);
+        -:  102:
+        -:  103:#ifndef QT_NO_DEBUG_STREAM
+        -:  104:    QDebug debug() const;
+        -:  105:    QDebug debug(const QLoggingCategory &cat) const;
+        -:  106:    QDebug debug(CategoryFunction catFunc) const;
+        -:  107:    QDebug info() const;
+        -:  108:    QDebug info(const QLoggingCategory &cat) const;
+        -:  109:    QDebug info(CategoryFunction catFunc) const;
+        -:  110:    Q_DECL_COLD_FUNCTION
+        -:  111:    QDebug warning() const;
+        -:  112:    Q_DECL_COLD_FUNCTION
+        -:  113:    QDebug warning(const QLoggingCategory &cat) const;
+        -:  114:    Q_DECL_COLD_FUNCTION
+        -:  115:    QDebug warning(CategoryFunction catFunc) const;
+        -:  116:    Q_DECL_COLD_FUNCTION
+        -:  117:    QDebug critical() const;
+        -:  118:    Q_DECL_COLD_FUNCTION
+        -:  119:    QDebug critical(const QLoggingCategory &cat) const;
+        -:  120:    Q_DECL_COLD_FUNCTION
+        -:  121:    QDebug critical(CategoryFunction catFunc) const;
+        -:  122:    Q_DECL_COLD_FUNCTION
+        -:  123:    QDebug fatal() const;
+        -:  124:    Q_DECL_COLD_FUNCTION
+        -:  125:    QDebug fatal(const QLoggingCategory &cat) const;
+        -:  126:    Q_DECL_COLD_FUNCTION
+        -:  127:    QDebug fatal(CategoryFunction catFunc) const;
+        -:  128:
+        -:  129:    QNoDebug noDebug() const noexcept;
+        -:  130:#endif // QT_NO_DEBUG_STREAM
+        -:  131:
+        -:  132:private:
+        -:  133:    QMessageLogContext context;
+        -:  134:};
+        -:  135:
+        -:  136:#undef QT_MESSAGE_LOGGER_NORETURN
+        -:  137:
+        -:  138:#if !defined(QT_MESSAGELOGCONTEXT) && !defined(QT_NO_MESSAGELOGCONTEXT)
+        -:  139:#  if defined(QT_NO_DEBUG)
+        -:  140:#    define QT_NO_MESSAGELOGCONTEXT
+        -:  141:#  else
+        -:  142:#    define QT_MESSAGELOGCONTEXT
+        -:  143:#  endif
+        -:  144:#endif
+        -:  145:
+        -:  146:#ifdef QT_MESSAGELOGCONTEXT
+        -:  147:  #define QT_MESSAGELOG_FILE static_cast<const char *>(__FILE__)
+        -:  148:  #define QT_MESSAGELOG_LINE __LINE__
+        -:  149:  #define QT_MESSAGELOG_FUNC static_cast<const char *>(Q_FUNC_INFO)
+        -:  150:#else
+        -:  151:  #define QT_MESSAGELOG_FILE nullptr
+        -:  152:  #define QT_MESSAGELOG_LINE 0
+        -:  153:  #define QT_MESSAGELOG_FUNC nullptr
+        -:  154:#endif
+        -:  155:
+        -:  156:#define qDebug QMessageLogger(QT_MESSAGELOG_FILE, QT_MESSAGELOG_LINE, QT_MESSAGELOG_FUNC).debug
+        -:  157:#define qInfo QMessageLogger(QT_MESSAGELOG_FILE, QT_MESSAGELOG_LINE, QT_MESSAGELOG_FUNC).info
+        -:  158:#define qWarning QMessageLogger(QT_MESSAGELOG_FILE, QT_MESSAGELOG_LINE, QT_MESSAGELOG_FUNC).warning
+        -:  159:#define qCritical QMessageLogger(QT_MESSAGELOG_FILE, QT_MESSAGELOG_LINE, QT_MESSAGELOG_FUNC).critical
+        -:  160:#define qFatal QMessageLogger(QT_MESSAGELOG_FILE, QT_MESSAGELOG_LINE, QT_MESSAGELOG_FUNC).fatal
+        -:  161:
+        -:  162:#define QT_NO_QDEBUG_MACRO while (false) QMessageLogger().noDebug
+        -:  163:
+        -:  164:#if defined(QT_NO_DEBUG_OUTPUT)
+        -:  165:#  undef qDebug
+        -:  166:#  define qDebug QT_NO_QDEBUG_MACRO
+        -:  167:#endif
+        -:  168:#if defined(QT_NO_INFO_OUTPUT)
+        -:  169:#  undef qInfo
+        -:  170:#  define qInfo QT_NO_QDEBUG_MACRO
+        -:  171:#endif
+        -:  172:#if defined(QT_NO_WARNING_OUTPUT)
+        -:  173:#  undef qWarning
+        -:  174:#  define qWarning QT_NO_QDEBUG_MACRO
+        -:  175:#endif
+        -:  176:
+        -:  177:Q_CORE_EXPORT void qt_message_output(QtMsgType, const QMessageLogContext &context,
+        -:  178:                                     const QString &message);
+        -:  179:
+        -:  180:Q_CORE_EXPORT Q_DECL_COLD_FUNCTION void qErrnoWarning(int code, const char *msg, ...);
+        -:  181:Q_CORE_EXPORT Q_DECL_COLD_FUNCTION void qErrnoWarning(const char *msg, ...);
+        -:  182:
+        -:  183:typedef void (*QtMessageHandler)(QtMsgType, const QMessageLogContext &, const QString &);
+        -:  184:Q_CORE_EXPORT QtMessageHandler qInstallMessageHandler(QtMessageHandler);
+        -:  185:
+        -:  186:Q_CORE_EXPORT void qSetMessagePattern(const QString &messagePattern);
+        -:  187:Q_CORE_EXPORT QString qFormatLogMessage(QtMsgType type, const QMessageLogContext &context,
+        -:  188:                                        const QString &buf);
+        -:  189:
+        -:  190:Q_DECL_COLD_FUNCTION
+        -:  191:Q_CORE_EXPORT QString qt_error_string(int errorCode = -1);
+        -:  192:
+        -:  193:QT_END_NAMESPACE
+        -:  194:#endif // QLOGGING_H

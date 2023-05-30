@@ -1,0 +1,5 @@
+/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete.dir
+/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete_autogen_timestamp_deps.dir
+/home/octav/CLionProjects/SimularePlanete/cmake-build-debug-coverage/CMakeFiles/SimularePlanete_autogen.dir
